@@ -59,9 +59,9 @@ MonoBehaviour:
   - {fileID: 4359158050478601808, guid: 9bb67f3ceb864fb16972655de46574ab, type: 3}
   instantiatedObjectsProbabilities:
   - 1
-  batchTimeout: 8
+  batchTimeout: 6
   batchMinSize: 2
-  batchMaxSize: 4
+  batchMaxSize: 5
 --- !u!1001 &194395348060631455
 PrefabInstance:
   m_ObjectHideFlags: 0
