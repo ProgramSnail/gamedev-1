@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbadfa3cc758cc3cb9b03b521036debb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageable: 1
   maxStrength: 500
 --- !u!50 &608315514287566628
 Rigidbody2D:
@@ -216,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ccff32f4826351f988bc60af6a9425c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 100
+  score: 20
 --- !u!1001 &647973763943945937
 PrefabInstance:
   m_ObjectHideFlags: 0
