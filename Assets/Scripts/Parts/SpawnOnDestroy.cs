@@ -4,17 +4,21 @@ namespace Game
 {
     public class SpawnOnDestroy : MonoBehaviour
     {
-        public GameObject spawnedObject;
+        public GameObject objectToSpawn;
 
         public float probability = 1.0f;
 
-        void OnDestroy()
+        private void OnDestroy()
         {
-            if (Random.value <= probability)
+            if (SpawnCondition() && Random.value <= probability)
             {
-                var newObject = Instantiate(spawnedObject, transform.position, Quaternion.identity);
-                newObject.transform.SetParent(null);
+                FindObjectOfType<InstanceGenerator>().MakeInstance(objectToSpawn, transform.position, Quaternion.identity);
             }
+        }
+
+        protected virtual bool SpawnCondition()
+        {
+            return true;
         }
     }
 }

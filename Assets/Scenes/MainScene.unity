@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 275369546}
   - component: {fileID: 275369545}
   - component: {fileID: 275369547}
+  - component: {fileID: 275369548}
   m_Layer: 0
   m_Name: GlobalManager
   m_TagString: Untagged
@@ -325,6 +326,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0578cd0ec4a3b75593baf2da8ddaf6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &275369548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275369544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8968586c49429ad2861d644b45583e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
@@ -760,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 608315514287566630, guid: 6d23e49534e777a89be57733b245d1e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 608315514287566630, guid: 6d23e49534e777a89be57733b245d1e1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -793,10 +806,6 @@ PrefabInstance:
     - target: {fileID: 608315514287566630, guid: 6d23e49534e777a89be57733b245d1e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6953816124564511642, guid: 6d23e49534e777a89be57733b245d1e1, type: 3}
-      propertyPath: speed
-      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d23e49534e777a89be57733b245d1e1, type: 3}

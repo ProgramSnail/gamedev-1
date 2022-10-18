@@ -4,6 +4,8 @@ namespace Game
 {
     public class ShipBody : MonoBehaviour
     {
+        public bool damageable = true;
+        
         public int maxStrength = 100;
         public int strength { get; private set; }
 
@@ -21,6 +23,11 @@ namespace Game
 
         public void Damage(int damage)
         {
+            if (!damageable)
+            {
+                return;
+            }
+            
             strength -= damage;
 
             if (strength <= 0)
@@ -33,6 +40,11 @@ namespace Game
             {
                 _damageReaction.OnDamage();
             }
+        }
+
+        public void AddStrength(int strengthAdded)
+        {
+            strength = Mathf.Min(strength + strengthAdded, maxStrength);
         }
     }
 }

@@ -6,9 +6,9 @@ namespace Game
     {
         private void Update()
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                Shoot();
+             Shoot();
             }
         }
     }

@@ -5,9 +5,15 @@ namespace Game
 {
     public class EnergyPowerUp : PowerUp
     {
+        public int energyAdded = 50;
+        
         protected override void Upgrade(GameObject obj)
         {
-            throw new NotImplementedException();
+            var playerAbilities = obj.GetComponent<PlayerAbilities>();
+            if (playerAbilities != null)
+            {
+                playerAbilities.AddEnergy(energyAdded);
+            }
         }
     }
 }

@@ -38,5 +38,10 @@ namespace Game
         {
             throw new NotImplementedException();
         }
+
+        public void AddEnergy(int energyAdded)
+        {
+            energy = Mathf.Min(energy + energyAdded, maxEnergy);
+        }
     }
 }

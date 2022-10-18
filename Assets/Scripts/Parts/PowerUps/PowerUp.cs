@@ -5,7 +5,7 @@ namespace Game
 {
     public abstract class PowerUp : MonoBehaviour
     {
-        public String targetTag;
+        public String targetTag = "Player";
 
         protected void OnTriggerEnter2D(Collider2D col)
         {
