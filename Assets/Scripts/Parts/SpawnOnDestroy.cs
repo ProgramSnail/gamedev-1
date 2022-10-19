@@ -1,18 +1,24 @@
+using Game.Utils;
 using UnityEngine;
 
 namespace Game
 {
     public class SpawnOnDestroy : MonoBehaviour
     {
-        public GameObject objectToSpawn;
+        public GameObject[] objectsToSpawn;
 
-        public float probability = 1.0f;
+        public float generateAnyObjectProbability = 1.0f;
+        
+        public float[] probabilities;
 
         private void OnDestroy()
         {
-            if (SpawnCondition() && Random.value <= probability)
+            if (SpawnCondition() && Random.value < generateAnyObjectProbability)
             {
-                FindObjectOfType<InstanceGenerator>().MakeInstance(objectToSpawn, transform.position, Quaternion.identity);
+                FindObjectOfType<InstanceGenerator>().MakeInstance(
+                    GameUtils.ChooseRandomObject(objectsToSpawn, probabilities), 
+                    transform.position, 
+                    Quaternion.identity);
             }
         }
 

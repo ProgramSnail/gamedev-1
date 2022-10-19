@@ -31,7 +31,7 @@ namespace Game
             _superweaponLastActivationTime = Time.time - superweaponDuration;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             if (_superweaponLastActivationTime + superweaponDuration > Time.time)
             {

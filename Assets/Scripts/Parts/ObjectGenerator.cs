@@ -1,3 +1,4 @@
+using Game.Utils;
 using UnityEngine;
 
 namespace Game
@@ -37,18 +38,7 @@ namespace Game
             
             for (int i = 0; i < batchSize; ++i)
             {
-                float randomValue = Random.value;
-                
-                for (int j = 0; j < instantiatedObjectsProbabilities.Length; ++j)
-                {
-                    randomValue -= instantiatedObjectsProbabilities[j];
-                    
-                    if (randomValue <= 0)
-                    {
-                        result[i] = instantiatedObjects[j];
-                        break;
-                    }
-                }
+                result[i] = GameUtils.ChooseRandomObject(instantiatedObjects, instantiatedObjectsProbabilities);
             }
 
             return result;

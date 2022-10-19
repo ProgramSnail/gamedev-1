@@ -310,8 +310,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d6abd3bd56854c0bead79c3d278979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 3507681505459667603, guid: 9640cf4d5f014a5ac8d1aa0f63c495dc, type: 3}
-  probability: 0.1
+  objectsToSpawn:
+  - {fileID: 3507681505459667603, guid: 20efd188ba8df81a89b9e7fd53a032e2, type: 3}
+  - {fileID: 3507681505459667603, guid: 9640cf4d5f014a5ac8d1aa0f63c495dc, type: 3}
+  - {fileID: 3507681505459667603, guid: 86bd86c0d0efec8fa93febe27f8b342c, type: 3}
+  generateAnyObjectProbability: 0.1
+  probabilities:
+  - 0.6
+  - 0.2
+  - 0.2
 --- !u!1 &7171026160665511867
 GameObject:
   m_ObjectHideFlags: 0
